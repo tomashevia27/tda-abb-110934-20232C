@@ -72,7 +72,7 @@ DIAGRAMA DE MEMORIA DEL ABB:
 
 ## Respuestas a las preguntas teóricas
 
-1)
+RESPUESTA 1:
 Arbol: Un arbol esta conformado por nodos conectados entre si, inicia con el nodo raiz y este apunta a cero o mas subarboles no vacios (ver diagrama)
 Los arboles son muy utiles para representar una jerarqui en la estructura de datos y optimizar mucho la busqueda de elementos dentro del mismo.
 Para cantidades muy grandes de datos, la busqueda lineal (O(n)) puede ser muy ineficiente, por eso se crearon los arboles, estos reducen el tiempo de busqueda (O(log(n)) ya que al comparar el elemento buscado con la raiz, se termina descartando un lado (izq o der) entero, ahorrando asi mucho tiempo y siendo mas eficiente.
@@ -87,6 +87,9 @@ DIAGRAMAS ARBOL y ABB:
 <img width="70%" src="img/diagrama_arbol_y_abb.png">
 </div>
 
+
+
+
 las operaciones basicas de un abb son:
 - crear: crea el arbol reservandole lugar en memoria.
 - destruir: destruye el arbol, liberando la memoria de todos los nodos que hay en el, y luego liberando el arbol. complejidad O(n), ya que recorre todos los nodos para liberarlos.
@@ -96,4 +99,8 @@ las operaciones basicas de un abb son:
 - buscar: busca un elemento en el arbol, su complejidad es O(log(n)) ya que realiza una busqueda binaria
 - recorrer: recorre todo el arbol, puede hacer de forma Inorden, Preorden o Postorden. su complejidad es O(n)
 
-2) Yo en mi implementacion decidi realizar todo de manera recursiva, ya que me parecio la forma mas sencilla de hacer. Tuve algunas complicaciones, no para manejo de nodos, punteros y memoria, sino mas bien para plantear las recursividades, pero logre realizarlas y que funcionen correctamente (las funciones ya las explique en la parte de funcionamiento). creo que este tda me ayudo a entender mucho mas el tema de recursividad.
+
+
+
+RESPUESTA 2:
+Yo en mi implementacion decidi realizar todo de manera recursiva, ya que me parecio la forma mas sencilla de hacer. Tuve algunas complicaciones, no para manejo de nodos, punteros y memoria, sino mas bien para plantear las recursividades, pero logre realizarlas y que funcionen correctamente (las funciones ya las explique en la parte de funcionamiento). creo que este tda me ayudo a entender mucho mas el tema de recursividad.
