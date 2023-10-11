@@ -5,18 +5,18 @@
 - Para compilar:
 
 ```bash
-línea make pruebas_chanutron
+make pruebas_chanutron
 ```
 
 - Para ejecutar:
 
 ```bash
-línea ./pruebas_chanutron
+./pruebas_chanutron
 ```
 
 - Para ejecutar con valgrind:
 ```bash
-línea make valgrind-chanutron
+make valgrind-chanutron
 ```
 ---
 ##  Funcionamiento
