@@ -179,12 +179,15 @@ size_t abb_tamanio(abb_t *arbol)
 	return arbol->tamanio;
 }
 
-void abb_destruir_raices(nodo_abb_t *raiz)
+void abb_destruir_raices(nodo_abb_t *raiz, void (*destructor)(void *))
 {
 	if (raiz == NULL)
 		return;
-	abb_destruir_raices(raiz->izquierda);
-	abb_destruir_raices(raiz->derecha);
+	abb_destruir_raices(raiz->izquierda, destructor);
+	abb_destruir_raices(raiz->derecha, destructor);
+	if (destructor) {
+		destructor(raiz->elemento);
+	}
 	free(raiz);
 }
 
@@ -192,27 +195,16 @@ void abb_destruir(abb_t *arbol)
 {
 	if (arbol == NULL)
 		return;
-	abb_destruir_raices(arbol->nodo_raiz);
+	abb_destruir_raices(arbol->nodo_raiz, NULL);
 	free(arbol);
-}
-
-void destruir_todo_recursivo(nodo_abb_t *raiz, void (*destructor)(void *))
-{
-	if (raiz) {
-		destruir_todo_recursivo(raiz->izquierda, destructor);
-		destructor(raiz->elemento);
-		destruir_todo_recursivo(raiz->derecha, destructor);
-	}
 }
 
 void abb_destruir_todo(abb_t *arbol, void (*destructor)(void *))
 {
-	if (arbol && destructor) {
-		destruir_todo_recursivo(arbol->nodo_raiz, destructor);
-	}
-	if (arbol) {
-		abb_destruir(arbol);
-	}
+	if (arbol == NULL)
+		return;
+	abb_destruir_raices(arbol->nodo_raiz, destructor);
+	free(arbol);
 }
 
 void con_cada_inorden(nodo_abb_t *raiz, bool (*funcion)(void *, void *),
