@@ -76,12 +76,13 @@ RESPUESTA 1:
 
 
 Arbol: Un arbol esta conformado por nodos conectados entre si, inicia con el nodo raiz y este apunta a cero o mas subarboles no vacios (ver diagrama)
-Los arboles son muy utiles para representar una jerarqui en la estructura de datos y optimizar mucho la busqueda de elementos dentro del mismo.
-Para cantidades muy grandes de datos, la busqueda lineal (O(n)) puede ser muy ineficiente, por eso se crearon los arboles, estos reducen el tiempo de busqueda (O(log(n)) ya que al comparar el elemento buscado con la raiz, se termina descartando un lado (izq o der) entero, ahorrando asi mucho tiempo y siendo mas eficiente.
+Los arboles son muy utiles para representar una jerarquia en la estructura de datos y optimizar mucho la busqueda de elementos dentro del mismo.
+Para cantidades muy grandes de datos, la busqueda lineal (O(n)) puede no ser muy eficiente, por eso se crearon los arboles, estos reducen el tiempo de busqueda a (O(log(n)), ya que al comparar el elemento buscado con la raiz, se termina descartando un lado (izq o der) entero, ahorrando asi mucho tiempo y siendo mas eficiente.
 
 Arbol Binario: el arbol binario es un tipo de arbol que tiene como caracteristica principal que cada nodo puede tener como maximo 2 hijos, teniendo asi la nocion de izquierda y derecha. esto es muy util para realizar busquedas.
 
 Arbol Binario de Busqueda (ABB): el ABB es un arbol que, como dice su nombre, se usa para almacenar datos y poder buscarlos de manera rapida y eficiente, usando un algoritmo similar al de la busqueda binaria. Es muy importante que sea binario, ya que al tener el concepto de parte izquierda y parte derecha, se puede compara el elemento con la raiz, ver si es mayor o menor y, segun el caso, continuar buscando por el subarbol izquierdo o el subarbol derecho.
+En el abb, los elementos menores se insertan a la izquierda y los mayores a la derecha.
 
 DIAGRAMAS ARBOL y ABB:
 
