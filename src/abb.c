@@ -185,7 +185,7 @@ void abb_destruir_raices(nodo_abb_t *raiz, void (*destructor)(void *))
 		return;
 	abb_destruir_raices(raiz->izquierda, destructor);
 	abb_destruir_raices(raiz->derecha, destructor);
-	if(destructor){
+	if (destructor) {
 		destructor(raiz->elemento);
 	}
 	free(raiz);
